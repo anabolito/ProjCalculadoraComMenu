@@ -60,7 +60,7 @@ internal class Program
 
         while(opcao != 5)
         {
-            Menu();
+            Menu();  //chamada de função
         }
         
     }
