@@ -7,7 +7,7 @@ internal class Program
         double num1, num2;
         int opcao = 0;
 
-        double Soma()
+        double Addition()
         {
             double soma = num1 + num2;
             Console.WriteLine($" {num1} + {num2} = {soma}");
@@ -15,14 +15,14 @@ internal class Program
             return soma;   
         }
 
-        double Subtracao()
+        double Subtraction()
         {
-            double subtracao = num1 - num2;
-            Console.WriteLine($" {num1} - {num2} = {subtracao}");
-            return subtracao;   
+            double subtraction = num1 - num2;
+            Console.WriteLine($" {num1} - {num2} = {subtraction}");
+            return subtraction;   
         }
 
-        double Divisao()
+        double Division()
         {
             if (num2 == 0)
             {
@@ -31,18 +31,18 @@ internal class Program
             }
             else
             {
-                double divisao = num1/num2;
-                Console.WriteLine($" {num1} / {num2} = {divisao}");
-                return divisao;
+                double division = num1/num2;
+                Console.WriteLine($" {num1} / {num2} = {division}");
+                return division;
             }
             
         }
 
-        double Multiplicacao()
+        double Multiplication()
         {
-            double multiplicacao = num1 * num2;
-            Console.WriteLine($" {num1} * {num2} = {multiplicacao}");
-            return multiplicacao;
+            double multiplication = num1 * num2;
+            Console.WriteLine($" {num1} * {num2} = {multiplication}");
+            return multiplication;
         }
 
         int Menu()
@@ -59,22 +59,22 @@ internal class Program
             switch (opcao)
             {
                 case 1:
-                    Soma();
+                    Addition();
                     Console.ReadLine();
                     break;
 
                 case 2:
-                    Subtracao();
+                    Subtraction();
                     Console.ReadLine();
                     break;
 
                 case 3:
-                    Multiplicacao();
+                    Multiplication();
                     Console.ReadLine();
                     break;
 
                 case 4:
-                    Divisao();
+                    Division();
                     Console.ReadLine();
                     break;
 
