@@ -7,7 +7,45 @@ internal class Program
         double num1, num2;
         int opcao = 0;
 
-        void Menu()
+        double Soma()
+        {
+            double soma = num1 + num2;
+            Console.WriteLine($" {num1} + {num2} = {soma}");
+            Console.ReadLine();
+            return soma;   
+        }
+
+        double Subtracao()
+        {
+            double subtracao = num1 - num2;
+            Console.WriteLine($" {num1} - {num2} = {subtracao}");
+            return subtracao;   
+        }
+
+        double Divisao()
+        {
+            if (num2 == 0)
+            {
+                Console.WriteLine("Não existe divisão por zero");
+                return 0;
+            }
+            else
+            {
+                double divisao = num1/num2;
+                Console.WriteLine($" {num1} / {num2} = {divisao}");
+                return divisao;
+            }
+            
+        }
+
+        double Multiplicacao()
+        {
+            double multiplicacao = num1 * num2;
+            Console.WriteLine($" {num1} * {num2} = {multiplicacao}");
+            return multiplicacao;
+        }
+
+        int Menu()
         {
             Console.Clear();
             Console.WriteLine("1- Somar");
@@ -21,23 +59,22 @@ internal class Program
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("A soma dos números é: " + (num1 + num2));
+                    Soma();
                     Console.ReadLine();
                     break;
 
                 case 2:
-                    Console.WriteLine("A subtração dos números é: " + (num1 - num2));
+                    Subtracao();
                     Console.ReadLine();
-
                     break;
 
                 case 3:
-                    Console.WriteLine("A multiplicação dos números é: " + (num1 * num2));
+                    Multiplicacao();
                     Console.ReadLine();
                     break;
 
                 case 4:
-                    Console.WriteLine("A divisão dos números é: " + (num1 / num2));
+                    Divisao();
                     Console.ReadLine();
                     break;
 
@@ -51,6 +88,7 @@ internal class Program
                     Console.ReadLine();
                     break;
             }
+            return opcao;
         }
 
         Console.WriteLine("Informe o 1° número: ");
